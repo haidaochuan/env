@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气和空气质量</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="script.js" defer></script>  
+  <style>
+    #weather-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      //border: 1px solid #ccc; /* Add border style */
+      padding: 10px; /* Add padding for better spacing */
+    }
+
+    .weather-details {
+      display: flex;
+      //border: 1px solid #ccc; /* Add border style */
+      width: 100%;
+    }
+
+    .weather-left,
+    .weather-right {
+      flex: 1;
+      width: 100%; /* Take up the entire width */
+      text-align: left; /* Left-align the content */
+    }
+
+    /* Additional styling for better visibility */
+    #dateButtons {
+      display: flex;
+      justify-content: space-around; /* Evenly distribute buttons */
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin: 1px;
+    }
+
+    .weather-details p {
+      margin: 2px 0;
+      font-weight: bold;
+    }
+    
+  </style>
+
+  
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-7">
+            <h2>天气预报</h2>
+            <div class="btn-group" id="dateButtons">
+               
+            </div>
+            <div class="mt-3" id="weather-info">
+                <!-- 天气预报内容将在这里显示 -->
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h2>空气质量</h2>
+            <div class="btn-group">
+                <button class="btn btn-success" id="area1"></button>
+                <button class="btn btn-success" id="area2"></button>
+                <button class="btn btn-success" id="area3"></button>
+            </div>
+            <div class="mt-3" id="air-quality">
+                <!-- 空气质量内容将在这里显示 -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>  
+</html>
